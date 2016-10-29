@@ -15,8 +15,34 @@ public class AveragesOfNumbersTest {
      */
     @Test
     public void basicTests() {
-        assertEquals(Arrays.toString(new double[]{2, 2, 2, 2}), Arrays.toString(AveragesOfNumbers.averages(new int[]{2, 2, 2, 2, 2})));
-        assertEquals(Arrays.toString(new double[]{0, 0, 0, 0}), Arrays.toString(AveragesOfNumbers.averages(new int[]{2, -2, 2, -2, 2})));
-        assertEquals(Arrays.toString(new double[]{2, 4, 3, -4.5}), Arrays.toString(AveragesOfNumbers.averages(new int[]{1, 3, 5, 1, -10})));
+        final double[] arrayExpected = {2, 2, 2, 2};
+        final int[] arrayActual = {2, 2, 2, 2, 2};
+        final String expected = Arrays.toString(arrayExpected);
+        final String number = Arrays.toString(AveragesOfNumbers.averages(arrayActual));
+        assertEquals(expected, number);
+    }
+
+    /**
+     * This method executed basic test1.
+     */
+    @Test
+    public void basicTests1() {
+        final double[] arrayExpected = {0, 0, 0, 0};
+        final int[] arrayActual = {2, -2, 2, -2, 2};
+        final String expected = Arrays.toString(arrayExpected);
+        final String number = Arrays.toString(AveragesOfNumbers.averages(arrayActual));
+        assertEquals(expected, number);
+    }
+
+    /**
+     * This method executed basic test2.
+     */
+    @Test
+    public void basicTests2() {
+        final double[] arrayExpected = {2, 4, 3, -4.5};
+        final int[] arrayActual = {1, 3, 5, 1, -10};
+        final String expected = Arrays.toString(arrayExpected);
+        final String number = Arrays.toString(AveragesOfNumbers.averages(arrayActual));
+        assertEquals(expected, number);
     }
 }

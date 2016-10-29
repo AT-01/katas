@@ -22,7 +22,6 @@ final class AveragesOfNumbers {
     static double[] averages(final int[] numbers) {
         final double[] res = new double[null == numbers || numbers.length == 0 ? 0 : numbers.length - 1];
         for (int i = 0; i < res.length; i++) {
-            assert numbers != null;
             res[i] = (numbers[i] + numbers[i + 1]) / 2.0;
         }
         return res;
